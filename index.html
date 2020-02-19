@@ -1,0 +1,50 @@
+<html>
+<head> 
+    <title>Game</title>
+</head>
+
+<script>
+    function computerPlay(){
+        choices = ["rock","paper","scissors"]
+        selection = Math.ceil(Math.random()*3)-1
+        return choices[selection];
+    }
+    
+    function playRound(){
+        choices = ["rock","paper","scissors"]
+        var playerSelection = choices[prompt("Choose: 1) Rock 2) Paper 3) Scissors")-1]
+        console.log("you picked: "+playerSelection)
+        
+        var computerSelection = computerPlay()
+        console.log("computer picked: "+computerSelection)
+
+        if (playerSelection == "rock") {
+            if (computerSelection == "rock"){
+                return("Two rocks! It's a tie")}
+            if (computerSelection == "paper"){
+                return("You Lose! Paper beats rock")}
+            if (computerSelection == "scissors"){
+                return("You Win! Rock beats scissors")}           
+        }
+        else if (playerSelection == "paper") {
+            if (computerSelection == "rock") {
+                return("You Win! Paper beats rock")}
+            if (computerSelection == "paper"){
+                return("Two papers! It's a tie")}
+            if (computerSelection == "scissors"){
+                return("You lose! Scissors cuts paper")}           
+        }
+        else {
+            if (computerSelection == "rock") {
+                return("You lose! Rock smashes scissors")}
+            if (computerSelection == "paper"){
+                return("You win! Scissors cuts paper")}
+            if (computerSelection == "scissors"){
+                return("Tie! Two scissors")}           
+        }
+    }
+</script>
+<body>
+<H1>See Console!</H1>;
+</body>
+</html>
